@@ -14,13 +14,13 @@
 [x] O inimigo deve se locomover pela tela da direita para esquerda.
 [x] Devem aparecer fora do campo de visão do jogador.
 [x] Deve mais de um tipo de inimigo que devem aparecer de forma aleatória.
-[] Quando o projétil do jogador atingir o inimigo, deve-se remove o inimigo da tela.
-[] Quando o projétil do jogador atingir o inimigo, deve soma pontos
+[x] Quando o projétil do jogador atingir o inimigo, deve-se remove o inimigo da tela.
+[x] Quando o projétil do jogador atingir o inimigo, deve soma pontos
 
 <strong> Jogo </strong>
 
-[] Deve iniciar com uma tela inicial.
-[] O jogo começa quando o jogador cliquar no botão.
+[x] Deve iniciar com uma tela inicial.
+[x] O jogo começa quando o jogador cliquar no botão.
 [] Quando as vidas do jogador chegar a zero jogo é interrompido e deve aparecer uma tela de game over.
-[] O jogo deve aprensentar a quantidade de pontos do jogador.
-[] Na tela de game over deve apresentar um botão de reiniciar o jogo.
+[x] O jogo deve aprensentar a quantidade de pontos do jogador.
+[x] Na tela de game over deve apresentar um botão de reiniciar o jogo.

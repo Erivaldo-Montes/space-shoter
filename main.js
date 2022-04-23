@@ -3,6 +3,7 @@ const playArea = document.querySelector(".play-area");
 const score = document.querySelector(".score");
 const allLifes = document.querySelectorAll(".life");
 const lifesDiv = document.querySelector(".lifes");
+
 const enemiesImgs = [
   "images/monster-1.png",
   "images/monster-2.png",
@@ -12,8 +13,7 @@ const enemiesImgs = [
 let createInterval;
 let points = 0;
 let moveBackgroundInterval;
-let isGameOver = false;
-let speedEnemy = 1;
+let speedEnemy = 2;
 let lifes = 3;
 
 // check which key is pressed
@@ -151,8 +151,8 @@ const checkLifes = () => {
   allLifes[lifes].style.visibility = "hidden";
   allLifes[lifes].style.opacity = "0";
   if (lifes === 0) {
-      gameOver();
-    }
+    gameOver();
+  }
 };
 
 // create enemy in the play area
@@ -225,8 +225,7 @@ const startGame = () => {
 
 // game over
 const gameOver = () => {
-  score.classList.toggle("show");
-  isGameOver = true;
+  enemySpeed = 1;
   window.removeEventListener("keydown", flyShip);
   window.clearInterval(moveBackgroundInterval);
   window.clearInterval(createInterval);
@@ -241,6 +240,7 @@ const gameOver = () => {
   let gameOverText = document.createElement("h1");
   gameOverText.innerText = `Game Over! Your score is ${points}`;
   gameOver.appendChild(gameOverText);
+
   score.classList.remove("show");
   points = 0;
   document.querySelector("#score").innerHTML = points;
