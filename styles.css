@@ -103,7 +103,23 @@ body {
   opacity: 0;
 }
 
+.lifes {
+  position: absolute;
+  left: 600px;
+  top: 550px;
+  height: 20px;
+  width: 80px;
+  visibility: hidden;
+  opacity: 0;
+}
 .show {
   visibility: visible;
   opacity: 1;
+}
+
+.lifes :nth-child(1),
+.lifes :nth-child(2),
+.lifes :nth-child(3) {
+  height: 20px;
+  width: 20px;
 }

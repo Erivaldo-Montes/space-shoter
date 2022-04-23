@@ -1,6 +1,8 @@
 const player = document.querySelector(".player");
 const playArea = document.querySelector(".play-area");
 const score = document.querySelector(".score");
+const allLifes = document.querySelectorAll(".life");
+const lifesDiv = document.querySelector(".lifes");
 const enemiesImgs = [
   "images/monster-1.png",
   "images/monster-2.png",
@@ -12,6 +14,7 @@ let points = 0;
 let moveBackgroundInterval;
 let isGameOver = false;
 let speedEnemy = 1;
+let lifes = 3;
 
 // check which key is pressed
 const flyShip = (event) => {
@@ -137,9 +140,19 @@ const checkCollisionPlayer = () => {
       enemy.offsetLeft <= player.offsetLeft + player.offsetWidth
     ) {
       createExplosion(enemy);
-      gameOver();
+      enemy.remove();
+      checkLifes();
     }
   });
+};
+
+const checkLifes = () => {
+  lifes--;
+  allLifes[lifes].style.visibility = "hidden";
+  allLifes[lifes].style.opacity = "0";
+  if (lifes === 0) {
+      gameOver();
+    }
 };
 
 // create enemy in the play area
@@ -165,8 +178,9 @@ const createEnemy = () => {
 const moveEnemy = (enemy) => {
   let timeEnemy = setInterval(() => {
     let currentLeft = parseInt(getComputedStyle(enemy).left);
-    if (currentLeft <= -enemy.offsetWidth) {
-      playArea.removeChild(enemy);
+    if (currentLeft <= 0 - enemy.offsetWidth) {
+      checkLifes();
+      enemy.remove();
       clearInterval(timeEnemy);
     } else {
       enemy.style.left = `${currentLeft - speedEnemy}px`;
@@ -184,7 +198,7 @@ const moveEnemy = (enemy) => {
 // start game
 const playGame = () => {
   score.classList.add("show");
-  isGameOver = false;
+  lifes = 3;
   window.clearInterval(createInterval);
   window.clearInterval(moveBackgroundInterval);
   document
@@ -193,6 +207,11 @@ const playGame = () => {
   document.querySelector(".start-game").style.display = "none";
   moveBackgroundInterval = setInterval(moveBackground, 30);
 
+  lifesDiv.classList.add("show");
+  allLifes.forEach((life) => {
+    life.style.visibility = "visible";
+    life.style.opacity = "1";
+  });
   createEnemy();
   moveBackground();
   window.addEventListener("keydown", flyShip);
@@ -212,6 +231,7 @@ const gameOver = () => {
   window.clearInterval(moveBackgroundInterval);
   window.clearInterval(createInterval);
 
+  lifesDiv.classList.remove("show");
   const enemies = document.querySelectorAll(".enemy");
   enemies.forEach((enemy) => enemy.remove());
   const gameOver = document.querySelector(".game-over");
