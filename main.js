@@ -11,6 +11,7 @@ let createInterval;
 let points = 0;
 let moveBackgroundInterval;
 let isGameOver = false;
+let speedEnemy = 1;
 
 // check which key is pressed
 const flyShip = (event) => {
@@ -118,6 +119,7 @@ const checkCollision = () => {
         createExplosion(enemy);
         playArea.removeChild(enemy);
         points = points + 100;
+        speedEnemy = speedEnemy + 0.3;
 
         // show the score
         document.querySelector("#score").innerHTML = points;
@@ -169,7 +171,7 @@ const moveEnemy = (enemy) => {
       playArea.removeChild(enemy);
       clearInterval(timeEnemy);
     } else {
-      enemy.style.left = `${currentLeft - 5}px`;
+      enemy.style.left = `${currentLeft - speedEnemy}px`;
       if (checkCollision()) {
         playArea.removeChild(enemy);
         clearInterval(timeEnemy);
