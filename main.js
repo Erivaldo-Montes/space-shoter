@@ -183,7 +183,7 @@ const moveEnemy = (enemy) => {
 
 // start game
 const playGame = () => {
-  score.classList.toggle("show");
+  score.classList.add("show");
   isGameOver = false;
   window.clearInterval(createInterval);
   window.clearInterval(moveBackgroundInterval);
@@ -221,6 +221,10 @@ const gameOver = () => {
   let gameOverText = document.createElement("h1");
   gameOverText.innerText = `Game Over! Your score is ${points}`;
   gameOver.appendChild(gameOverText);
+  score.classList.remove("show");
+  points = 0;
+  document.querySelector("#score").innerHTML = points;
+
   gameOver.addEventListener("click", () => {
     gameOver.style.visibility = "hidden";
     gameOver.style.opacity = "0";
