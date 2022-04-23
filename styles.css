@@ -93,16 +93,17 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   top: 30px;
+  left: 600px;
   padding: 10px;
   color: white;
   text-align: center;
   height: 20px;
-  width: 100px;
+  width: 150px;
   visibility: hidden;
   opacity: 0;
 }
 
-.score.show {
+.show {
   visibility: visible;
   opacity: 1;
 }
