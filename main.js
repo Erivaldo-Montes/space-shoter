@@ -62,9 +62,7 @@ const createLaser = () => {
   laser.classList.add("laser");
   laser.setAttribute(
     "style",
-    `top: ${player.offsetTop + 30}px; left: ${
-      player.offsetLeft + player.offsetWidth
-    }px;`
+    `top: ${player.offsetTop}px; left: ${player.offsetLeft + 20}px;`
   );
   laser.src = "images/shoot-ship.gif";
   return laser;
