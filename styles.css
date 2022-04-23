@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(10, 29, 157);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-area {
+  height: 600px;
+  width: 800px;
+  background-color: black;
+  background-image: url(images/space.png);
+  position: relative;
+  overflow: hidden;
+}
+
+.player {
+  height: 70px;
+  width: 70px;
+  left: 20px;
+  top: 250px;
+  position: absolute;
+}
+
+.laser {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+
+.enemy {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+}
+
+.start-game {
+  position: absolute;
+  top: 30px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.start-button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin-top: 100px;
+
+  cursor: pointer;
+}
+
+.game-over {
+  position: absolute;
+  top: 30px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.explosion {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 0px;
+  left: 0px;
+}
+
+.score {
+  position: absolute;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  top: 30px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  height: 20px;
+  width: 100px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.score.show {
+  visibility: visible;
+  opacity: 1;
+}
