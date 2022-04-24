@@ -13,12 +13,13 @@
 
 <p>
     <spam>para jogar o jogo execute o index.html</spam>
+    
     O jogo é bem simples:
-    <ul>
-        <li>Seta para cima: move o jogador para cima</li>
-        <li>Seta para baixo move a nave para baixo</li>
-        <li>espaço dispara o energia</li>
-    </ul>
+<ul>
+    <li>Seta para cima: move o jogador para cima</li>
+    <li>Seta para baixo move a nave para baixo</li>
+    <li>espaço dispara o energia</li>
+</ul>
 
     Você inicia o jogo com trê vidas, mas se os inimigos collidirem com a nave ou os inimigos passarem por você rumo ao planeta, perde uma vida.
     Quando as vidas chegarem a zero perde o jogo
