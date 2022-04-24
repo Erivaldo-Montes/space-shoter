@@ -12,6 +12,7 @@
 <h2 color="violet"><strong>Jogo</strong></h2>
 
 <p>
+    <spam>para jogar o jogo execute o index.html</spam>
     O jogo é bem simples:
     <ul>
         <li>Seta para cima: move o jogador para cima</li>
