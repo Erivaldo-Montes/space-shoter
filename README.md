@@ -1,6 +1,6 @@
 # Space shoter game
 
-<h2 color="red"><strong>Introdução</strong></h2>
+<h2 style="color: red;"><strong>Introdução</strong></h2>
 
 <p>
     O space shoter é um jogo em que dois planetas estão em guerra, e um grande guerreiro é nessecário para a defesa
@@ -9,7 +9,7 @@
     inpedir a invasão
 </p>
 
-<h2 color="violet"><strong>Jogo</strong></h2>
+<h2 style="color: violet;"><strong>Jogo</strong></h2>
 
 <p>
  <spam>para jogar o jogo execute o index.html</spam>
