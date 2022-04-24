@@ -167,8 +167,6 @@ const createEnemy = () => {
     left: ${playArea.offsetWidth + enemy.offsetWidth}px;`
     );
 
-    console.log("left ", playArea.offsetWidth + enemy.offsetWidth);
-
     playArea.appendChild(enemy);
     moveEnemy(enemy);
   }, 2000);
@@ -199,6 +197,7 @@ const moveEnemy = (enemy) => {
 const playGame = () => {
   score.classList.add("show");
   lifes = 3;
+
   window.clearInterval(createInterval);
   window.clearInterval(moveBackgroundInterval);
   document
@@ -225,11 +224,10 @@ const startGame = () => {
 
 // game over
 const gameOver = () => {
-  enemySpeed = 1;
   window.removeEventListener("keydown", flyShip);
   window.clearInterval(moveBackgroundInterval);
   window.clearInterval(createInterval);
-
+  speedEnemy = 2;
   lifesDiv.classList.remove("show");
   const enemies = document.querySelectorAll(".enemy");
   enemies.forEach((enemy) => enemy.remove());
