@@ -1,5 +1,7 @@
 # Space shoter game
 
+<img src="images/screenshot.png">
+
 <h2 style="color: red;"><strong>Introdução</strong></h2>
 
 <p>
